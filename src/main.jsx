@@ -15,7 +15,7 @@ async function fetchData() {
       console.log('Datos válidos recibidos. Representando en la interfaz de usuario...');
       ReactDOM.createRoot(document.getElementById('root')).render(
         <React.StrictMode>
-          <h1>{JSON.stringify(data)}</h1>
+          <h1>{"M:" + JSON.stringify(data)}</h1>
         </React.StrictMode>
       );
     } else {
