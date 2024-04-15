@@ -6,7 +6,7 @@ import { json } from '../../server/core/db/sequelize';
 async function fetchData() {
   try {
     console.log('Enviando solicitud al servidor...');
-    const response = await fetch('http://localhost:8099/products');
+    const response = await fetch('http://localhost:8099/api/bugs');
     console.log('Respuesta recibida del servidor:', response);
     const data = await response.json();
     console.log('Datos recibidos:', data);
