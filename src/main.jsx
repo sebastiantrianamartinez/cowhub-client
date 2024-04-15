@@ -11,7 +11,7 @@ async function fetchData() {
     const data = await response.json();
     console.log('Datos recibidos:', data);
     
-    if (response.ok) {
+    if (data !== null) {
       console.log('Datos válidos recibidos. Representando en la interfaz de usuario...');
       ReactDOM.createRoot(document.getElementById('root')).render(
         <React.StrictMode>
