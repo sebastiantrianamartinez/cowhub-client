@@ -1,6 +1,19 @@
 const express = require('express');
 const path = require('path');
 const httpProxy = require('http-proxy');
+const cors = require('cors');
+
+app.use(cors({
+  origin: [
+    'http://localhost:8096',
+    'http://localhost:8021',
+    'http://localhost:8021',
+    'http://127.0.0.1:8021',
+    'http://127.0.0.1',
+  ],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+}));
 
 const app = express();
 const port = process.env.PORT || 8099;
